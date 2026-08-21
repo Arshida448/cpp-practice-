@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num, i, count, copy;
+
+    cout << "Enter number: ";
+    cin >> num;
+
+    for(i = 0; i <= 9; i++)
+    {
+        count = 0;
+        copy = num;
+
+        while(copy > 0)
+        {
+            if(copy % 10 == i)
+            {
+                count++;
+            }
+
+            copy = copy / 10;
+        }
+
+        if(count > 0)
+        {
+            cout << i << " : " << count << endl;
+        }
+    }
+
+    return 0;
+}
